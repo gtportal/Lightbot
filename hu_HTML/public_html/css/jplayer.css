@@ -26,16 +26,14 @@ div.jp-video {
 	font-family:Verdana, Arial, sans-serif;
 	line-height:1.6;
 	color: #666;
-	border: 1px solid #dbf7d6;
-	background-color:#eee;
 	position:relative;
 }
 div.jp-video-300p {
-	width:400px;
+	width:320px;
 }
 div.jp-interface {
 	position: relative;
-	background-color:#eee;
+	background-color:#fff;
 	width:100%;
 }
 
