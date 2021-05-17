@@ -5,7 +5,8 @@ $(document).ready(function() {
   // audio player
   $("#audioPlayer").jPlayer({
     ready: function () {
-     $(this).jPlayer("setMedia", lightBot.ui.media.audio.menu).jPlayer("play"); // attempt to auto-play
+     // $(this).jPlayer("setMedia", lightBot.ui.media.audio.menu).jPlayer("play"); // attempt to auto-play
+      $(this).jPlayer("setMedia", lightBot.ui.media.audio.menu).jPlayer(""); 
     },
     swfPath: "js",
     supplied: "mp3",
@@ -25,8 +26,8 @@ $(document).ready(function() {
     cssSelectorAncestor: '#videoContainer',
     backgroundColor: '#000000',
     size: {
-      width: "400px",
-      height: "300px",
+      width: "320px",
+      height: "260px",
       cssClass: "jp-video-300p"
     }
   });
@@ -42,10 +43,10 @@ $(document).ready(function() {
     videoPlayer: null,
     audio: {
       menu: {
-        mp3: "media/audio/menu.mp3"
+        mp3: "media/audio/csend.mp3"
       },
       game: {
-        mp3: "media/audio/game.mp3"
+        mp3: "media/audio/csend.mp3"
       }
     },
     video: [
@@ -60,14 +61,14 @@ $(document).ready(function() {
       {webmv: "media/video/repeat.webm", m4v: "media/video/repeat.mp4", ogv: "media/video/repeat.ogv"},
       {webmv: "media/video/medal.webm", m4v: "media/video/medal.mp4", ogv: "media/video/medal.ogv"}
     ],
-    audioEnabled: true,
-    playMenuAudio: function() {
+    audioEnabled: false,
+    playMenuAudio: function() { 		
       if (this.audioPlayer.data('jPlayer').status.media.mp3 != this.audio.menu.mp3) {
         this.audioPlayer.jPlayer('setMedia', this.audio.menu);
         if (this.audioEnabled) {
           this.audioPlayer.jPlayer('play');
         }
-      }
+      }      
     },
     playGameAudio: function () {
       if (this.audioPlayer.data('jPlayer').status.media.mp3 != this.audio.game.mp3) {
@@ -81,7 +82,7 @@ $(document).ready(function() {
       this.videoPlayer.jPlayer("setMedia", this.video[x]);
     },
     toggleAudioOn: function() {
-      this.audioEnabled = true;
+      this.audioEnabled = false;
       this.audioPlayer.jPlayer('play');
 
       $('.audioToggleButton').children('span.ui-button-icon-primary').addClass('ui-icon-volume-on').removeClass('ui-icon-volume-off');
@@ -96,10 +97,12 @@ $(document).ready(function() {
       if (this.audioEnabled) {
         this.toggleAudioOff();
       } else {
-        this.toggleAudioOn();
+        this.toggleAudioOn(); 
       }
     }
   };
 
   lightBot.ui.media = media;
 })();
+
+
