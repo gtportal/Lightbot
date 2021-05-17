@@ -67,7 +67,7 @@ $(document).ready(function() {
       // reset the map (resets the bot as well)
       lightBot.map.reset();
 
-      $(this).button('option', {label: 'Run', icons: {primary: 'ui-icon-play'}}).removeClass('ui-state-highlight');
+      $(this).button('option', {label: 'Fuss', icons: {primary: 'ui-icon-play'}}).removeClass('ui-state-highlight');
     } else {
       var instructions = lightBot.ui.editor.getInstructions($('#programContainer > div > ul > li'));
       lightBot.bot.queueInstructions(instructions);
