@@ -64,17 +64,23 @@ var canvasView = function(canvas) {
     lightBot.map.step();
   }
 
-  function draw() {
+  function draw() {	 
+	canvasCW = document.getElementById("gameCanvas").offsetWidth + 500; 
+	canvasCH = document.getElementById("gameCanvas").offsetHeight + 500; 	
+	 
     //clear main canvas
-    lightBot.ctx.clearRect(0,0, canvas.width(), canvas.height());
+    //lightBot.ctx.clearRect(0,0, canvas.width(), canvas.height());
+    lightBot.ctx.clearRect(0,0, canvasCW, canvasCH);
 
     // background
     lightBot.ctx.fillStyle = bg;
-    lightBot.ctx.fillRect(0,0, canvas.width(), canvas.height());
+    // lightBot.ctx.fillRect(0,0, canvas.width(), canvas.height());    
+	lightBot.ctx.fillRect(0,0, canvasCW, canvasCH);
 
     // draw the map and the bot in the correct order
     switch (lightBot.bot.direction) {
-      case lightBot.directions.se:
+      case lightBot.directions.se:  
+    
         for (var i = lightBot.map.getLevelSize().x - 1; i >= 0; i--) {
           for (var j = lightBot.map.getLevelSize().y - 1; j >= 0; j--) {
             lightBot.map.getMapRef()[i][j].draw();
@@ -165,8 +171,7 @@ var canvasView = function(canvas) {
         break;
     }
 
-  }
-
+  } 
 
   lightBot.step = step;
   lightBot.draw = draw;
