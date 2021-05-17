@@ -6,10 +6,11 @@ $(document).ready(function() {
     draggable: false,
     autoOpen: false,
     modal: true,
-    width: 400,
-    height: 200,
+    width: 320,
+    height: 220,
     stack: false,
     resizable: false,
+    position: ['middle',140],
     close: function() {
       lightBot.ui.showLevelSelectScreen();
     },
@@ -24,10 +25,11 @@ $(document).ready(function() {
     draggable: false,
     autoOpen: false,
     modal: true,
-    width: 400,
-    height: 200,
+    width: 320,
+    height: 220,
     stack: true,
     resizable: false,
+    position: ['middle',140],
     close: function() {
       lightBot.achievements.display(); // display the next achievement if available
     },
