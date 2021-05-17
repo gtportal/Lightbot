@@ -5,27 +5,27 @@
 
   var ui = {
     showWelcomeScreen: function(hist) {
-      lightBot.ui.media.playMenuAudio();
+      //lightBot.ui.media.playMenuAudio();
 
       // save in history if parameter hist is not set and then set the new page title
       if (hist == null && lightBot.ui.History) lightBot.ui.History.pushState({page: 'welcomeScreen'});
-      $('title').text('Lightbot - Welcome');
+      $('title').text('Lightbot - Kezdőlap');
 
       $('.ui-screen').hide();
       $('#welcomeScreen').show();
     },
     showHelpScreen: function(hist) {
-      lightBot.ui.media.playMenuAudio();
+      //lightBot.ui.media.playMenuAudio();
 
       // save in history if parameter hist is not set and then set the new page title
       if (hist == null && lightBot.ui.History) lightBot.ui.History.pushState({page: 'helpScreen'});
-      $('title').text('Lightbot - Help');
+      $('title').text('Lightbot - Segítség');
 
       $('.ui-screen').hide();
       $('#helpScreen').show();
     },
     showAchievementsScreen: function(hist) {
-      lightBot.ui.media.playMenuAudio();
+      //lightBot.ui.media.playMenuAudio();
 
       var enabled = false;
 
@@ -38,13 +38,13 @@
 
       // save in history if parameter hist is not set and then set the new page title
       if (hist == null && lightBot.ui.History) lightBot.ui.History.pushState({page: 'achievementsScreen'});
-      $('title').text('Lightbot - Achievements');
+      $('title').text('Lightbot - Eredmények');
 
       $('.ui-screen').hide();
       $('#achievementsScreen').show();
     },
     showLevelSelectScreen: function(hist) {
-      lightBot.ui.media.playMenuAudio();
+     // lightBot.ui.media.playMenuAudio();
 
       $('#levelList').empty();
       for (var i = 0; i < lightBot.map.getNbrOfLevels(); i++) {
@@ -75,20 +75,20 @@
 
       // save in history if parameter hist is not set and then set the new page title
       if (hist == null && lightBot.ui.History) lightBot.ui.History.pushState({page: 'levelSelectScreen'});
-      $('title').text('Lightbot - Level Select');
+      $('title').text('Lightbot - Szint kiválasztása');
 
       $('.ui-screen').hide();
       $('#levelSelectScreen').show();
     },
     showGameScreen: function(level, hist) {
-      lightBot.ui.media.playGameAudio();
+     // lightBot.ui.media.playGameAudio();
 
       // load the map
       lightBot.map.loadMap(level);
 
       // save in history if parameter hist is not set and then set the new page title
       if (hist == null && lightBot.ui.History) lightBot.ui.History.pushState({page: 'gameScreen', 'level': level});
-      $('title').text('Lightbot - Level ' + level);
+      $('title').text('Lightbot - Szint ' + level);
 
       $('.ui-screen').hide();
 
@@ -99,11 +99,11 @@
         lightBot.ui.editor.loadProgram();
       } else {
         //append placeholder instruction
-        $('#programContainer ul').append('<li class="ui-state-default placeholder"><p class="placeholder">Drop your instructions here</p></li>');
+        $('#programContainer ul').append('<li class="ui-state-default placeholder"><p class="placeholder">Tedd az utasításokat ide!</p></li>');
       }
 
       // reset the run button
-      $('#runButton').button('option', {label: 'Run', icons: {primary: 'ui-icon-play'}}).removeClass('ui-state-highlight');
+      $('#runButton').button('option', {label: 'Fuss', icons: {primary: 'ui-icon-play'}}).removeClass('ui-state-highlight');
 
       // show the game screen
       $('#gameScreen').show();
