@@ -1,11 +1,12 @@
 /* GENERAL HTML TAGS
    ================================================== */
 
-body {
+#kulso {
   font-size: 11px;
   font-family: 'Lato', sans-serif;
-  color: #222222;
-  background-color: #cbf4f7;
+  color: #ffffff;
+  width:100%;
+  height:100%;
 }
 
 h1, h2, h3 {
@@ -25,6 +26,7 @@ h2 {
   font-size: 18px;
   padding: 5px;
   border-bottom: 1px solid black;
+  background: #531919;
 }
 
 h3 {
@@ -53,7 +55,7 @@ a:hover {
 .ui-widget-content {
   border: 1px solid #7CA6BA;
   background: none;
-  background-color: #4B4646;
+  background-color: #a83731;
 }
 
 /* ===[ JQuery UI dialogs ]=== */
@@ -81,12 +83,12 @@ a:hover {
 
 .ui-button.ui-state-default {
   background: none;
-  background-color: #5c5c5c;
+  background-color: #531919;
   border-color: #7ca6ba;
 }
 
 .ui-button.ui-state-hover {
-  background-color: #777777;
+  background-color: #7f2726;
   border-color: #a3cfc6;
 }
 
@@ -107,7 +109,7 @@ a:hover {
 .ui-accordion .ui-accordion-header {
   border: 1px solid #7ca6ba;
   margin-top: 5px;
-  background-color: #5c5c5c;
+  background-color: #531919;
   background-image: none;
   padding-left: 20px;
 }
@@ -191,21 +193,10 @@ a:hover {
 /* SCREENS
    ================================================== */
 
-#lightbot {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 980px;
-  height: 740px;
-  margin-left: -490px;
-  margin-top: -370px;
-}
-
 #credits {
-  font-size: 13px;
-  position: absolute;
-  top: 0px;
-  left: 0px;
+  margin-top:15px;
+  font-size: 12px;
+  font-style: italic;
   width: 100%;
   height: 20px;
   text-align: center;
@@ -222,58 +213,23 @@ a:hover {
 }
 
 .ui-screen {
-  position: absolute;
-  top: 20px;
   width: 100%;
   height: 700px;
-  border: 1px solid #000;
-  background-color: #4b4646;
 }
 
-#welcomeScreen {
+#welcomeScreen_ {
   background: #4b4646 url('../img/welcome_screen_bg.png') no-repeat left top;
 }
 
-#gameScreen {
-  background: #000;
-}
 
 /* WELCOME SCREEN
    ================================================== */
-
-#welcomeScreen .helpButton, #welcomeScreen .achievementsButton, #welcomeScreen .levelSelectButton, #welcomeScreen .audioToggleButton {
-  position: absolute;
-  bottom: 20px;
-}
-
-#welcomeScreen .levelSelectButton {
-  bottom: 19px;
-}
-
-#welcomeScreen .audioToggleButton {
-  right: 40px;
-}
-
-#welcomeScreen .helpButton {
-  right: 75px;
-}
-
-#welcomeScreen .achievementsButton {
-  right: 150px;
-}
-
-#welcomeScreen .levelSelectButton {
-  right: 278px;
-  border-width: 2px;
-}
 
 /* ACHIEVEMENTS SCREEN
    ================================================== */
 
 #achievementsScreen .mainMenuButton {
-  position: absolute;
-  left: 40px;
-  bottom: 40px;
+  margin:20px;
 }
 
 #achievementsList {
@@ -306,22 +262,21 @@ a:hover {
    ================================================== */
 
 #levelSelectScreen .mainMenuButton {
-  position: absolute;
-  left: 40px;
-  bottom: 40px;
+  margin:20px;
 }
 
 #levelSelectScreen ul {
-  width: 700px;
+  width:90%;
   list-style-type: none;
   margin: 50px auto;
   padding: 0;
 }
 
 #levelSelectScreen li {
+  display:  inline-block;
   margin: 5px 5px;
   padding: 1px;
-  float: left;
+  
   width: 120px;
   height: 90px;
   font-size: 4em;
@@ -330,9 +285,12 @@ a:hover {
   cursor: pointer;
   position: relative;
   border: 1px solid #7ca6ba;
-  background-color: #5c5c5c;
+  background-color: #531919;
   color: #fffff2;
 }
+
+
+
 
 #levelSelectScreen li.ui-state-highlight {
   color: #222;
@@ -357,32 +315,19 @@ a:hover {
    ================================================== */
 
 #canvasContainer {
-  position: absolute;
-  top: 1px;
-  left: 1px;
-  width: 690px;
-  height: 666px;
-  background-color: white;
+	padding-top: 35px;
 }
 
 #buttonContainer {
-  position: absolute;
-  left: 1px;
-  bottom: 1px;
-  width: 690px;
   height: 30px;
-  background-color: #4B4646;
 }
 
 /* ===[ Instruction Container ]=== */
 
 #instructionsContainer {
-  position: absolute;
-  top: 1px;
-  right: 1px;
   width: 286px;
   height: 220px;
-  background-color: #4B4646;
+  background-color: #a83731;
 }
 
 #instructionsContainer > div.ui-widget-content {
@@ -405,12 +350,14 @@ a:hover {
 /* ===[ Program Container ]=== */
 
 #programContainer {
+/*
   position: absolute;
   bottom: 1px;
   right: 1px;
+  * */
   width: 286px;
   height: 476px;
-  background-color: #4B4646;
+  background-color: #fdb86a;
 }
 
 #programContainer input[type="number"] {
@@ -462,7 +409,7 @@ a:hover {
   padding: 5px 5px;
   font-size: 11px;
   background: none;
-  background-color: #5c5c5c;
+  background-color: #531919;
   border-color: #7ca6ba;
 }
 
@@ -478,7 +425,7 @@ a:hover {
 }
 
 #instructionsContainer li.ui-state-hover, #programContainer li.ui-state-hover {
-  background-color: #777777;
+  background-color: #7f2726;
   border-color: #a3cfc6;
 }
 
@@ -500,10 +447,7 @@ li.ui-draggable-dragging {
    ================================================== */
 
 #helpScreenAccordionContainer {
-  position: absolute;
-  top: 40px;
-  left: 40px;
-  width: 400px;
+  width: 320px;
 }
 
 #helpScreenVerticalBar {
@@ -516,14 +460,93 @@ li.ui-draggable-dragging {
 }
 
 #helpScreen .mainMenuButton {
-  position: absolute;
-  left: 40px;
-  bottom: 40px;
+  margin:20px;
 }
 
 #videoContainer {
-  position: absolute;
-  top: 175px;
-  right: 40px;
-  width: 400px;
+  width: 320px; border:5px solid #531919;
+  box-shadow: -2px 2px 10px #531919;
+}
+
+/************  teszt  **********************/
+#helpScreen,
+#achievementsScreen,
+#gameFlex,
+#levelSelectScreen,
+#welcomeScreen {
+	background-color:#7f2726;
+	padding-bottom: 10px;
+}
+
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding:0;
+}
+
+#gameFlex {display: flex; align-items: flex-start; justify-content: center; padding-top: 30px;}
+
+#helpFlex {display: flex; align-items: flex-start; justify-content: space-evenly;}
+
+
+#welcome_btn_div,
+#welcome_img_div {width:100%; text-align:center;}
+#welcome_img {width:690px;max-width:80%;}
+
+#belso {
+  font-size: 11px;
+  text-align:center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding:0;
+}
+
+
+#lightbot {
+  width: 980px;
+  height: 740px;  
+  margin-top: 0px;
+  display: inline-block;
+  text-align:left;
+}
+
+@media only screen and (max-width : 1020px)   {
+	#lightbot {
+		width: 100%;
+		margin-left:0px;
+		left: 1px;
+	}	
+	#canvasContainer {
+		width: 80%;
+	}	
+	#gameScreen,
+	#gameCanvas {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width : 700px)   { 
+	#gameFlex {display: block;}
+	#canvasContainer {width: 100%; padding-top: 0px; margin-top:-100px;}
+	#levelSelectScreen li {
+		margin: 3px 3px;
+		padding-top: 5px;
+		width: 80px;
+		height: 50px;
+		font-size: 2em;
+		line-height: 1em;
+	}
+}
+
+@media only screen and (max-width : 670px)   { 
+	#helpFlex {display: block;text-align:center;}
+	#helpScreenAccordionContainer,
+	#videoContainer {display: inline-block;text-align:left;}
+}
+
+@media only screen and (max-width : 670px)   { 
+	#achievementsList h3 {font-size: 14px;}
 }
