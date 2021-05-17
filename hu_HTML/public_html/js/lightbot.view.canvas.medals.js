@@ -14,14 +14,14 @@
         break;
       case lightBot.medals.silver:
         $('#levelCompleteDialog .medal').addClass('medal-silver');
-        $('#levelCompleteDialog .message').html('Complete the level with ' + lightBot.map.getMedals().gold + ' instructions or less to receive a gold medal.');
+        $('#levelCompleteDialog .message').html('Az aranyéremhez ' + lightBot.map.getMedals().gold + ' vagy kevesebb utasítással kell teljesíteni a szintet.');
         break;
       case lightBot.medals.bronze:
         $('#levelCompleteDialog .medal').addClass('medal-bronze');
-        $('#levelCompleteDialog .message').html('Complete the level with ' + lightBot.map.getMedals().silver + ' instructions or less to receive a silver medal.');
+        $('#levelCompleteDialog .message').html('Az ezüstéremhez ' + lightBot.map.getMedals().silver + ' vagy kevesebb utasítással kell teljesíteni a szintet.');
         break;
       case lightBot.medals.noMedal:
-        $('#levelCompleteDialog .message').html('Complete the level with ' + lightBot.map.getMedals().bronze + ' instructions or less to receive a bronze medal.');
+        $('#levelCompleteDialog .message').html('A bronzéremhez ' + lightBot.map.getMedals().bronze + ' vagy kevesebb utasítással kell teljesíteni a szintet.');
         break;
       default:
         console.error('Unknown medal "' + medal + '"');
